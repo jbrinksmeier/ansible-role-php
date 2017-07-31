@@ -75,7 +75,8 @@
     state: started
     enabled: yes
   when:
-    - php_enable_php_fpm and ansible_distribution != "Debian"
+    - php_enable_php_fpm
+    - ansible_distribution != "Debian"
     - ansible_connection != 'docker'
 
 # See: https://github.com/ansible/ansible/issues/22303
@@ -86,5 +87,6 @@
     enabled: yes
     use: service
   when:
-    - php_enable_php_fpm and ansible_distribution == "Debian"
+    - php_enable_php_fpm
+    - ansible_distribution == "Debian"
     - ansible_connection != 'docker'
