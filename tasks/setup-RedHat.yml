@@ -1,4 +1,9 @@
 ---
+- name: Install php-fpm.conf
+  template:
+    src: php-fpm.conf.j2
+    dest: /etc/php-fpm.conf
+
 - name: Ensure PHP packages are installed.
   package:
     name: "{{ item }}"
