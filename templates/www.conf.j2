@@ -16,4 +16,4 @@ pm.max_requests = 500
 
 php_value[date.timezone] = {{ php_date_timezone }}
 clear_env = {{ php_fpm_clear_env }}
-
+php_value[memory_limit] = {{ php_memory_limit }}
