@@ -25,8 +25,8 @@ php_fpm_clear_env: yes
 php_fpm_pool_pm: dynamic
 php_fpm_pool_pm_max_children: 50
 php_fpm_pool_pm_start_servers: 5
-php_fpm_pool_pm_min_stare_servers: 5
-php_fpm_pool_pm_max_stare_servers: 5
+php_fpm_pool_pm_min_spare_servers: 5
+php_fpm_pool_pm_max_spare_servers: 5
 
 # The executable to run when calling PHP from the command line.
 php_executable: "php"
