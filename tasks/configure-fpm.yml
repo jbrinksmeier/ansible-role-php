@@ -58,14 +58,6 @@
       line: "listen = {{ php_fpm_listen }}"
     - regexp: '^listen\.allowed_clients.?=.+$'
       line: "listen.allowed_clients = {{ php_fpm_listen_allowed_clients }}"
-    - regexp: '^pm\.max_children.?=.+$'
-      line: "pm.max_children = {{ php_fpm_pm_max_children }}"
-    - regexp: '^pm\.start_servers.?=.+$'
-      line: "pm.start_servers = {{ php_fpm_pm_start_servers }}"
-    - regexp: '^pm\.min_spare_servers.?=.+$'
-      line: "pm.min_spare_servers = {{ php_fpm_pm_min_spare_servers }}"
-    - regexp: '^pm\.max_spare_servers.?=.+$'
-      line: "pm.max_spare_servers = {{ php_fpm_pm_max_spare_servers }}"
   when: php_enable_php_fpm
   notify: restart php-fpm
 
